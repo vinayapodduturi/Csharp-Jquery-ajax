@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Recent Search Dashboard";
+}
+
+
+<h3> Recent Search Dashboard</h3>
+
+<div class="row">
+    <div id="results" class="col-md-12"></div>
+</div>
+
+
+@section Scripts
+{
+    <script src="@Url.Content("~/Content/Scripts/recentSearch.js")"></script>
+    <script src="~/Content/Scripts/dateformatter.js"></script>
+}
+
+
+
+

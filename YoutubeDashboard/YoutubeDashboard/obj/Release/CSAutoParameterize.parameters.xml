@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="YoutubeDashboardContext-Web.config Connection String" description="YoutubeDashboardContext Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:fqmxwu5pkp.database.windows.net,1433;Database=youtube-dashboard-db;User ID=sp_yt_dashboard_db@fqmxwu5pkp;Password=Vi%lYIUGQ2;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Sravani\\Documents\\Visual\ Studio\ 2013\\Projects\\YoutubeDashboard\\YoutubeDashboard\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='YoutubeDashboardContext']/@connectionString" />
+  </parameter>
+</parameters>

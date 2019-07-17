@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Youtube Dashboard</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">YouRS</a>
+            </div>
+            @{
+                if (Session["Authenticate"] == "Yes")
+                {
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                          
+
+                            <li>@Html.ActionLink("Home", "Index", "User")</li>
+                            <li>@Html.ActionLink("Dashboard", "RecentSearch", "User")</li>
+                            <li>@Html.ActionLink("Admin", "userActivity", "User")</li>
+                            <li>@Html.ActionLink("Ontology Search", "OntologySearch", "User")</li>
+                        </ul>
+                 
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/Home/Logout">Logout</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                }
+            }
+
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">&copy; @DateTime.Now.Year - Team</p>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Content/Scripts/site.js"></script>
+</body>
+</html>
